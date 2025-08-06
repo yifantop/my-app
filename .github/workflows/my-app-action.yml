@@ -20,9 +20,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  Say-Hello-World:
-    runs-on: ubuntu-latest
-    steps:
       - run: echo "Building..."
       - run: npm run install
       - run: npm run build
