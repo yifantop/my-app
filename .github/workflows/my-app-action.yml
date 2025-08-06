@@ -20,4 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building..."
+      - run: npm run install
       - run: npm run build
