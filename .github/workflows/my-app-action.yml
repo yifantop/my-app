@@ -1,4 +1,4 @@
-name: my-app actions
+name: development workflow
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
