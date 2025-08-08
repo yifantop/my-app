@@ -1,9 +1,9 @@
 name: development
 run-name: built by ${{ github.actor }}
 on:
-  pull_request:
-    branches:
-      - master
+  label:
+    types:
+      - created
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
