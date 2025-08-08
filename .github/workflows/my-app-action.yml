@@ -1,5 +1,5 @@
 name: development
-run-name: my-app is built
+run-name: built by ${{ github.actor }}
 on: [push]
 jobs:
   Explore-GitHub-Actions:
