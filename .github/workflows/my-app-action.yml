@@ -1,29 +1,13 @@
-name: development
-run-name: built by ${{ github.actor }}
-on:
-  label:
-    types:
-      - created
-  push:
-    branches:
-      - master
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning Github Actions
+on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "21.x"
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "Building..."
-      - run: npm install
-      - run: npm run build
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+          node-version: "21"
+      - run: npm install -g bats
+      - run: bats -v
