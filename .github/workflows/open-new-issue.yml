@@ -9,7 +9,6 @@ jobs:
       issues: write
     steps:
       - run: |
-          gh issue --repo ${{ github.repository }} \
-            create --title "Issue title" --body "Issue body"
+          gh issue create --title "Test issue" --body "This is a test issue." --repo ${{ github.repository }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
