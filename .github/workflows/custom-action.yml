@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: yifantop/hello-world-javascript-action@3512961c291dc4923a885761aedc707ff4b25cf4
+        uses: yifantop/hello-world-javascript-action@v1.0.4
         with:
           who-to-greet: ZHUO YIFAN
 
